@@ -1,7 +1,7 @@
-project_name       = "sample-validate-project"
+project_name       = "bedrock-pipeline"
 environment        = "dev"
-source_repo_name   = "bedrock-custom-model-knowledge-base-terraform"
-source_repo_branch = "develop"
+source_repo_name   = "quixoticmonk/bedrock-custom-model-knowledge-base-terraform"
+source_repo_branch = "fix/pipeline-templates"
 provider_type      = "GitHub"
 create_new_role    = true
 #codepipeline_iam_role_name = <Role name> - Use this to specify the role name to be used by codepipeline if the create_new_role flag is set to false.

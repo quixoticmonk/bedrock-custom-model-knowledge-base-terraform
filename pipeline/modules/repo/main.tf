@@ -5,6 +5,6 @@
 #Amazon Web Services, Inc. or Amazon Web Services EMEA SARL or both.
 
 resource "aws_codestarconnections_connection" "bedrock-cn" {
-  name          = "bedrock-test-github-connection"
+  name          = var.source_repo
   provider_type = var.provider_type
 }

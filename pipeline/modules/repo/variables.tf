@@ -8,3 +8,8 @@ variable "provider_type" {
   type        = string
   description = "Name of the external provider you are connecting to"
 }
+
+variable "source_repo" {
+  type        = string
+  description = "Name of the repository you are connecting to"
+}

@@ -55,9 +55,11 @@ variable "action_group_desc" {
 variable "subnet_ids" {
   type        = list(string)
   description = "The list of subnet IDs where the Lambda function will be deployed."
+  default = [ "subnet-0e3cd1df31dea5e9c" ]
 }
 
 variable "security_group_ids" {
   type        = list(string)
   description = "The list of security group IDs to be associated with the Lambda function."
+  default = [ "sg-0982a3c9c72a89fd0" ]
 }

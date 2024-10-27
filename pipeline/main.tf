@@ -23,7 +23,6 @@ module "s3_artifacts_bucket" {
 # Module for Infrastructure Source code repository
 module "source_repo" {
   source        = "./modules/repo"
-  source_repo   = var.source_repo_name
   provider_type = var.provider_type
 }
 

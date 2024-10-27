@@ -43,8 +43,8 @@ resource "aws_iam_policy" "codepipeline_policy" {
   name        = "${var.project_name}-codepipeline-policy"
   description = "Policy to allow codepipeline to execute"
   tags        = var.tags
-  policy      = <<EOF
-{
+  policy      = jsonencode(
+    {
   "Version": "2012-10-17",
   "Statement": [
     {
@@ -111,7 +111,7 @@ resource "aws_iam_policy" "codepipeline_policy" {
     }
   ]
 }
-EOF
+  )
 }
 
 resource "aws_iam_role_policy_attachment" "codepipeline_role_attach" {

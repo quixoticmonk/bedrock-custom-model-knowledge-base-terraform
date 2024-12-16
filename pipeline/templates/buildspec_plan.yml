@@ -27,6 +27,7 @@ phases:
       - "ls -alR" 
       - "echo ## TERRAFORM PLAN : Generate the Terraform Plan"
       - "terraform plan -out tfapply"
+      - "terraform apply -input=false tfapply"      
 artifacts:
   files:
     - '**/*'

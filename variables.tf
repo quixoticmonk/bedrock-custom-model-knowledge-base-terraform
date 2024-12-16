@@ -61,5 +61,5 @@ variable "subnet_ids" {
 variable "security_group_ids" {
   type        = list(string)
   description = "The list of security group IDs to be associated with the Lambda function."
-  default = [ "sg-0982a3c9c72a89fd0" ]
+  default = [ "sg-0e497b2d5002d5bf0" ]
 }

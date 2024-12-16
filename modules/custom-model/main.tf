@@ -1,7 +1,7 @@
 resource "aws_s3_object" "v1_training_fine_tune" {
   bucket = var.custom_model_bucket
   key    = "training_data_v1/banking_qa.jsonl"
-  source = "../../banking_qa.jsonl"
+  source = "banking_qa.jsonl"
 }
 
 # resource "terraform_data" "training_data_fine_tune_v1" {

@@ -1,4 +1,4 @@
-project_name       = "bedrock-pipeline"
+project_name       = "bedrock"
 environment        = "dev"
 source_repo_name   = "quixoticmonk/bedrock-custom-model-knowledge-base-terraform"
 source_repo_branch = "fix/pipeline-templates"

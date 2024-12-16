@@ -52,6 +52,7 @@ resource "aws_iam_policy" "codepipeline_policy" {
             "s3:CreateBucket",
             "s3:List*",
             "s3:Get*",
+            "s3:PutObject",
             "s3:PutBucketPublicAccessBlock",
             "s3:PutBucketVersioning",
             "s3:PutEncryptionConfiguration",

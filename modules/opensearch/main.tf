@@ -33,7 +33,7 @@ resource "aws_opensearchserverless_access_policy" "sample_kb" {
       Principal = [
         var.bedrock_role_arn,
         data.aws_caller_identity.this.arn,
-        data.aws_caller_identity.this.account_id
+        "arn:aws:iam::${data.aws_caller_identity.this.account_id}:role/service-role/*" 
       ]
     }
   ])

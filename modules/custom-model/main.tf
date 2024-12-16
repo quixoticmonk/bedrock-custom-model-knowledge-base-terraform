@@ -38,9 +38,9 @@ resource "aws_bedrock_custom_model" "cm_cohere_v1" {
   }
 
   training_data_config {
-    s3_uri = "s3://${var.custom_model_bucket}/training_data_v1/${terraform_data.training_data_fine_tune_v1.output}"
+    s3_uri = "s3://${var.custom_model_bucket}/training_data_v1/banking_qa.jsonl"
   }
-  depends_on = [aws_s3_object.v1_training_fine_tune, terraform_data.training_data_fine_tune_v1]
+  depends_on = [aws_s3_object.v1_training_fine_tune]
 }
 
 resource "random_integer" "suffix" {

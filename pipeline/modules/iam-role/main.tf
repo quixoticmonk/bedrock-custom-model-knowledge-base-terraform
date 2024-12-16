@@ -109,7 +109,8 @@ resource "aws_iam_policy" "codepipeline_policy" {
             "cloudformation:DescribeStacks",
             "cloudformation:UpdateStack",
             "cloudformation:CreateResource",
-            "cloudformation:CreateResource"
+            "cloudformation:UpdateResource",
+            "iam:PassRole"
           ],
           "Resource" : "*"
         }

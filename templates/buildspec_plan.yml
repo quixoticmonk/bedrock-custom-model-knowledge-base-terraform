@@ -23,9 +23,11 @@ phases:
   build:
     commands:
       - "cd ${CODEBUILD_SRC_DIR}/${CODE_SRC_DIR}"
-      - "python3 -m venv .venv && source .venv/bin/activate"
+      - "pip3 install datasets && python3 modules/custom-model/bank_qa.py"    
+      - "ls -alR" 
       - "echo ## TERRAFORM PLAN : Generate the Terraform Plan"
       - "terraform plan -out tfapply"
+      - "terraform apply -input=false tfapply"      
 artifacts:
   files:
     - '**/*'
